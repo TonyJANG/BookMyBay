@@ -22,8 +22,8 @@
 		09917ED32766A4FE00B7AB72 /* SeeMoreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09917ED12766A4FE00B7AB72 /* SeeMoreCollectionViewCell.xib */; };
 		09917ED82766A77600B7AB72 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09917ED62766A77600B7AB72 /* HomeViewController.swift */; };
 		09917ED92766A77600B7AB72 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09917ED72766A77600B7AB72 /* HomeViewController.xib */; };
-		09917EDD2766A84400B7AB72 /* EntireCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09917EDB2766A84400B7AB72 /* EntireCollectionViewController.swift */; };
-		09917EDE2766A84400B7AB72 /* EntireCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09917EDC2766A84400B7AB72 /* EntireCollectionViewController.xib */; };
+		09917EDD2766A84400B7AB72 /* AllProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09917EDB2766A84400B7AB72 /* AllProductsViewController.swift */; };
+		09917EDE2766A84400B7AB72 /* AllProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09917EDC2766A84400B7AB72 /* AllProductsViewController.xib */; };
 		09FCB9832766A89E00B07B47 /* ModalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FCB9812766A89E00B07B47 /* ModalDetailViewController.swift */; };
 		09FCB9842766A89E00B07B47 /* ModalDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FCB9822766A89E00B07B47 /* ModalDetailViewController.xib */; };
 		09FCB9892766EDF200B07B47 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FCB9882766EDF200B07B47 /* ViewModel.swift */; };
@@ -68,8 +68,8 @@
 		09917ED12766A4FE00B7AB72 /* SeeMoreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeeMoreCollectionViewCell.xib; sourceTree = "<group>"; };
 		09917ED62766A77600B7AB72 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		09917ED72766A77600B7AB72 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		09917EDB2766A84400B7AB72 /* EntireCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntireCollectionViewController.swift; sourceTree = "<group>"; };
-		09917EDC2766A84400B7AB72 /* EntireCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntireCollectionViewController.xib; sourceTree = "<group>"; };
+		09917EDB2766A84400B7AB72 /* AllProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllProductsViewController.swift; sourceTree = "<group>"; };
+		09917EDC2766A84400B7AB72 /* AllProductsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllProductsViewController.xib; sourceTree = "<group>"; };
 		09FCB9812766A89E00B07B47 /* ModalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalDetailViewController.swift; sourceTree = "<group>"; };
 		09FCB9822766A89E00B07B47 /* ModalDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalDetailViewController.xib; sourceTree = "<group>"; };
 		09FCB9882766EDF200B07B47 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -181,8 +181,8 @@
 			children = (
 				09917ED62766A77600B7AB72 /* HomeViewController.swift */,
 				09917ED72766A77600B7AB72 /* HomeViewController.xib */,
-				09917EDB2766A84400B7AB72 /* EntireCollectionViewController.swift */,
-				09917EDC2766A84400B7AB72 /* EntireCollectionViewController.xib */,
+				09917EDB2766A84400B7AB72 /* AllProductsViewController.swift */,
+				09917EDC2766A84400B7AB72 /* AllProductsViewController.xib */,
 				09FCB9812766A89E00B07B47 /* ModalDetailViewController.swift */,
 				09FCB9822766A89E00B07B47 /* ModalDetailViewController.xib */,
 			);
@@ -332,7 +332,7 @@
 				09917ECF2766A4ED00B7AB72 /* RegularItemCollectionViewCell.xib in Resources */,
 				09917E9E27669E7700B7AB72 /* Main.storyboard in Resources */,
 				09FCB9842766A89E00B07B47 /* ModalDetailViewController.xib in Resources */,
-				09917EDE2766A84400B7AB72 /* EntireCollectionViewController.xib in Resources */,
+				09917EDE2766A84400B7AB72 /* AllProductsViewController.xib in Resources */,
 				09917ED92766A77600B7AB72 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,7 +364,7 @@
 				09FCB9892766EDF200B07B47 /* ViewModel.swift in Sources */,
 				09FCB9832766A89E00B07B47 /* ModalDetailViewController.swift in Sources */,
 				09917E9B27669E7700B7AB72 /* InitialLoadingViewController.swift in Sources */,
-				09917EDD2766A84400B7AB72 /* EntireCollectionViewController.swift in Sources */,
+				09917EDD2766A84400B7AB72 /* AllProductsViewController.swift in Sources */,
 				09917E9727669E7700B7AB72 /* AppDelegate.swift in Sources */,
 				09917ECE2766A4ED00B7AB72 /* RegularItemCollectionViewCell.swift in Sources */,
 				09917E9927669E7700B7AB72 /* SceneDelegate.swift in Sources */,

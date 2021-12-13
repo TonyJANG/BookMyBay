@@ -19,14 +19,14 @@ class InitialLoadingViewController: UIViewController {
     private var hasFinishedPresentation = false {
         didSet {
             if shouldPresentHome {
-                presentHome()
+                showHome()
             }
         }
     }
     private var hasSuccessfullyObtainedData = false {
         didSet {
             if shouldPresentHome {
-                presentHome()
+                showHome()
             }
         }
     }
@@ -63,11 +63,14 @@ class InitialLoadingViewController: UIViewController {
         viewModel?.getBooksData()
     }
     
-    func presentHome() {
+    func showHome() {
         let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
-        homeViewController.modalPresentationStyle = .fullScreen
-        homeViewController.modalTransitionStyle = .crossDissolve
-        present(homeViewController, animated: true) {
+        homeViewController.viewModel = viewModel
+        let navigationController = UINavigationController(rootViewController: homeViewController)
+        navigationController.navigationBar.tintColor = .systemTeal
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.modalTransitionStyle = .crossDissolve
+        present(navigationController, animated: true) {
             self.activityIndicatorView.stopAnimating()
         }
     }
