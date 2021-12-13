@@ -18,4 +18,8 @@ enum Constants {
     enum URL {
         static let booksDataURL = "https://de-coding-test.s3.amazonaws.com/books.json"
     }
+    enum ViewControllerTitles {
+        static let home = "Home"
+        static let allProducts = "All the books"
+    }
 }
