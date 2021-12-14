@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -54,17 +54,18 @@ Repository: github.com/TonyJANG/BookMyBay</string>
                                     <color key="textColor" systemColor="secondaryLabelColor"/>
                                     <color key="highlightedColor" systemColor="secondaryLabelColor"/>
                                 </label>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="l1x-ei-XV8">
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="l1x-ei-XV8">
                                     <rect key="frame" x="0.0" y="142.00000000000003" width="375" height="492.66666666666674"/>
                                 </stackView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="l1x-ei-XV8" firstAttribute="top" secondItem="YZN-si-NoO" secondAttribute="bottom" constant="40" id="4e8-NT-O5K"/>
+                                <constraint firstItem="jQk-7t-PmQ" firstAttribute="top" secondItem="l1x-ei-XV8" secondAttribute="bottom" priority="250" constant="40" id="AwC-IT-ldK"/>
                                 <constraint firstAttribute="trailing" secondItem="l1x-ei-XV8" secondAttribute="trailing" id="Jkp-gC-SGn"/>
                                 <constraint firstItem="jQk-7t-PmQ" firstAttribute="leading" secondItem="2b3-3e-BZA" secondAttribute="leading" constant="20" id="Pb6-yv-lUm"/>
                                 <constraint firstAttribute="trailing" secondItem="YZN-si-NoO" secondAttribute="trailing" constant="20" id="Vei-Nc-WGV"/>
-                                <constraint firstItem="jQk-7t-PmQ" firstAttribute="top" secondItem="l1x-ei-XV8" secondAttribute="bottom" constant="40" id="Zhf-fk-FOf"/>
+                                <constraint firstItem="jQk-7t-PmQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="l1x-ei-XV8" secondAttribute="bottom" constant="40" id="Zhf-fk-FOf"/>
                                 <constraint firstItem="YZN-si-NoO" firstAttribute="leading" secondItem="2b3-3e-BZA" secondAttribute="leading" constant="20" id="cyp-Bo-CyD"/>
                                 <constraint firstAttribute="trailing" secondItem="jQk-7t-PmQ" secondAttribute="trailing" constant="20" id="jmx-4d-0GH"/>
                                 <constraint firstItem="l1x-ei-XV8" firstAttribute="leading" secondItem="2b3-3e-BZA" secondAttribute="leading" id="s3K-Tq-YFb"/>
