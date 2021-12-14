@@ -31,7 +31,7 @@
                                     <color key="backgroundColor" systemColor="systemTealColor"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" imagePlacement="trailing" title="See all the books" subtitle="available on eBay today" imagePadding="55">
+                                    <buttonConfiguration key="configuration" style="plain" imagePlacement="trailing" title="See all the books" subtitle="available online today" imagePadding="55">
                                         <imageReference key="image" image="book" catalog="system" symbolScale="large"/>
                                         <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
                                         <fontDescription key="subtitleFontDescription" style="UICTFontTextStyleHeadline"/>
@@ -46,16 +46,16 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQk-7t-PmQ">
-                                    <rect key="frame" x="20" y="667.66666666666663" width="335" height="46.333333333333371"/>
+                                    <rect key="frame" x="20" y="674.66666666666663" width="335" height="39.333333333333371"/>
                                     <string key="text">BookMyBay - © Copyright TonyJANG 2021
 Contact info: tonyjang713@gmail.com
 Repository: github.com/TonyJANG/BookMyBay</string>
-                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                    <color key="highlightedColor" systemColor="secondaryLabelColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="l1x-ei-XV8">
-                                    <rect key="frame" x="0.0" y="142.00000000000003" width="375" height="485.66666666666674"/>
+                                    <rect key="frame" x="0.0" y="142.00000000000003" width="375" height="492.66666666666674"/>
                                 </stackView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -97,6 +97,9 @@ Repository: github.com/TonyJANG/BookMyBay</string>
     </objects>
     <resources>
         <image name="book" catalog="system" width="128" height="99"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

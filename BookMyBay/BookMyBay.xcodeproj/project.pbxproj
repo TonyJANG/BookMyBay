@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09677A4A27680C2000953C86 /* LoadImageURLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09677A4927680C2000953C86 /* LoadImageURLImageView.swift */; };
 		09917E9727669E7700B7AB72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09917E9627669E7700B7AB72 /* AppDelegate.swift */; };
 		09917E9927669E7700B7AB72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09917E9827669E7700B7AB72 /* SceneDelegate.swift */; };
 		09917E9B27669E7700B7AB72 /* InitialLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09917E9A27669E7700B7AB72 /* InitialLoadingViewController.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09677A4927680C2000953C86 /* LoadImageURLImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageURLImageView.swift; sourceTree = "<group>"; };
 		09917E9327669E7700B7AB72 /* BookMyBay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookMyBay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09917E9627669E7700B7AB72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09917E9827669E7700B7AB72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				09917EA427669E7900B7AB72 /* Info.plist */,
 				09917E9627669E7700B7AB72 /* AppDelegate.swift */,
 				09FCB98E2767046D00B07B47 /* Constants.swift */,
+				09677A4927680C2000953C86 /* LoadImageURLImageView.swift */,
 				09917E9827669E7700B7AB72 /* SceneDelegate.swift */,
 				09917E9F27669E7900B7AB72 /* Assets.xcassets */,
 				09FCB98C2766FEE800B07B47 /* Models */,
@@ -360,6 +363,7 @@
 			files = (
 				09FCB98B2766FDE100B07B47 /* BookModel.swift in Sources */,
 				09FCB98F2767046D00B07B47 /* Constants.swift in Sources */,
+				09677A4A27680C2000953C86 /* LoadImageURLImageView.swift in Sources */,
 				09917ED22766A4FE00B7AB72 /* SeeMoreCollectionViewCell.swift in Sources */,
 				09FCB9892766EDF200B07B47 /* ViewModel.swift in Sources */,
 				09FCB9832766A89E00B07B47 /* ModalDetailViewController.swift in Sources */,

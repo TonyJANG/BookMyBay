@@ -12,7 +12,11 @@ protocol ViewModelDelegate: AnyObject {
 }
 
 class ViewModel {
-    var booksData: [BookModel]?
+    private var booksData: [BookModel]? {
+        didSet {
+            // notification
+        }
+    }
     weak var delegate: ViewModelDelegate?
     
     convenience init(delegate: ViewModelDelegate) {
@@ -21,6 +25,16 @@ class ViewModel {
     }
     
     func getBooksData() {
+        if Thread.isMainThread {
+            DispatchQueue.global().async {
+                self._getBooksData()
+            }
+        } else {
+            _getBooksData()
+        }
+    }
+    
+    private func _getBooksData() {
         guard let url = URL(string: Constants.URL.booksDataURL) else {
             DispatchQueue.main.async {
                 self.delegate?.didGet(booksData: nil, errorMessage: Constants.ErrorMessages.invalidURL)
@@ -28,7 +42,8 @@ class ViewModel {
             return
         }
         
-        URLSession.shared.dataTask(with: url) { data, _, error in
+        URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
+            guard let self = self else { return }
             var booksData: [BookModel]?
             var errorMessage: String?
             if let error = error {
@@ -49,5 +64,9 @@ class ViewModel {
                 self.delegate?.didGet(booksData: booksData, errorMessage: errorMessage)
             }
         }.resume()
+    }
+    
+    func getLocalBooksData() -> [BookModel]? {
+        return booksData
     }
 }
