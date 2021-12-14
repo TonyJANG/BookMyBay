@@ -10,7 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var stackView: UIStackView!
-    
+    let color: UIColor = #colorLiteral(red: 0.4156862745, green: 0.7764705882, blue: 0.8666666667, alpha: 1)
     var viewModel: ViewModel?
     
     override func viewDidLoad() {
@@ -27,6 +27,5 @@ class HomeViewController: UIViewController {
         let allProductsViewController = AllProductsViewController(nibName: "AllProductsViewController", bundle: nil)
         allProductsViewController.viewModel = viewModel
         show(allProductsViewController, sender: nil)
-//        navigationController?.show(allProductsViewController, sender: nil)
     }
 }

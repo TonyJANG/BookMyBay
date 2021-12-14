@@ -22,4 +22,7 @@ enum Constants {
         static let home = "Home"
         static let allProducts = "All the books"
     }
+    enum Identifier {
+        static let regularItemCollectionViewCell = "RegularItemCollectionViewCell"
+    }
 }
