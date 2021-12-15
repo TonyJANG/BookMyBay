@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="BookMyBay" customModuleProvider="target">
+            <connections>
+                <outlet property="stackView" destination="l1x-ei-XV8" id="RnX-jd-iV1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rt1-iW-PhY">
+                    <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2b3-3e-BZA">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="734"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZN-si-NoO">
+                                    <rect key="frame" x="20" y="40" width="335" height="62"/>
+                                    <color key="backgroundColor" systemColor="systemTealColor"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" imagePlacement="trailing" title="See all the books" subtitle="available online today" imagePadding="55">
+                                        <imageReference key="image" image="book" catalog="system" symbolScale="large"/>
+                                        <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <fontDescription key="subtitleFontDescription" style="UICTFontTextStyleHeadline"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <integer key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didTapSeeAllProducts:" destination="-1" eventType="touchUpInside" id="sIq-VI-cZw"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQk-7t-PmQ">
+                                    <rect key="frame" x="20" y="674.66666666666663" width="335" height="39.333333333333371"/>
+                                    <string key="text">BookMyBay - © Copyright TonyJANG 2021
+Contact info: tonyjang713@gmail.com
+Repository: github.com/TonyJANG/BookMyBay</string>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                    <color key="highlightedColor" systemColor="secondaryLabelColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="l1x-ei-XV8">
+                                    <rect key="frame" x="0.0" y="142.00000000000003" width="375" height="492.66666666666674"/>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="l1x-ei-XV8" firstAttribute="top" secondItem="YZN-si-NoO" secondAttribute="bottom" constant="40" id="4e8-NT-O5K"/>
+                                <constraint firstItem="jQk-7t-PmQ" firstAttribute="top" secondItem="l1x-ei-XV8" secondAttribute="bottom" priority="250" constant="40" id="AwC-IT-ldK"/>
+                                <constraint firstAttribute="trailing" secondItem="l1x-ei-XV8" secondAttribute="trailing" id="Jkp-gC-SGn"/>
+                                <constraint firstItem="jQk-7t-PmQ" firstAttribute="leading" secondItem="2b3-3e-BZA" secondAttribute="leading" constant="20" id="Pb6-yv-lUm"/>
+                                <constraint firstAttribute="trailing" secondItem="YZN-si-NoO" secondAttribute="trailing" constant="20" id="Vei-Nc-WGV"/>
+                                <constraint firstItem="jQk-7t-PmQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="l1x-ei-XV8" secondAttribute="bottom" constant="40" id="Zhf-fk-FOf"/>
+                                <constraint firstItem="YZN-si-NoO" firstAttribute="leading" secondItem="2b3-3e-BZA" secondAttribute="leading" constant="20" id="cyp-Bo-CyD"/>
+                                <constraint firstAttribute="trailing" secondItem="jQk-7t-PmQ" secondAttribute="trailing" constant="20" id="jmx-4d-0GH"/>
+                                <constraint firstItem="l1x-ei-XV8" firstAttribute="leading" secondItem="2b3-3e-BZA" secondAttribute="leading" id="s3K-Tq-YFb"/>
+                                <constraint firstItem="YZN-si-NoO" firstAttribute="top" secondItem="2b3-3e-BZA" secondAttribute="top" constant="40" id="w5i-Kn-WKn"/>
+                                <constraint firstAttribute="bottom" secondItem="jQk-7t-PmQ" secondAttribute="bottom" constant="20" id="xUL-Ud-LPO"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="2b3-3e-BZA" secondAttribute="bottom" id="BFD-bu-ase"/>
+                        <constraint firstItem="2b3-3e-BZA" firstAttribute="centerX" secondItem="rt1-iW-PhY" secondAttribute="centerX" id="GqI-4g-FF5"/>
+                        <constraint firstItem="2b3-3e-BZA" firstAttribute="height" relation="greaterThanOrEqual" secondItem="rt1-iW-PhY" secondAttribute="height" id="LX2-du-B3g"/>
+                        <constraint firstItem="2b3-3e-BZA" firstAttribute="leading" secondItem="rt1-iW-PhY" secondAttribute="leading" id="bvr-w6-WdX"/>
+                        <constraint firstItem="2b3-3e-BZA" firstAttribute="top" secondItem="rt1-iW-PhY" secondAttribute="top" id="cCu-om-JNy"/>
+                        <constraint firstAttribute="trailing" secondItem="2b3-3e-BZA" secondAttribute="trailing" id="ezG-gn-QLI"/>
+                        <constraint firstItem="2b3-3e-BZA" firstAttribute="height" secondItem="rt1-iW-PhY" secondAttribute="height" priority="699" id="tEe-b3-Arr"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="rt1-iW-PhY" secondAttribute="bottom" id="fGm-mm-S48"/>
+                <constraint firstItem="rt1-iW-PhY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="mbJ-WI-JUP"/>
+                <constraint firstItem="rt1-iW-PhY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oLT-fq-6gj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rt1-iW-PhY" secondAttribute="trailing" id="qNQ-Pr-UR7"/>
+            </constraints>
+            <point key="canvasLocation" x="140.57971014492756" y="139.95535714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="book" catalog="system" width="128" height="99"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
