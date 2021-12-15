@@ -23,6 +23,9 @@ enum Constants {
         static let allProducts = "All the books"
     }
     enum Identifier {
+        static let allProductsViewController = "AllProductsViewController"
+        static let carouselViewController = "CarouselViewController"
         static let regularItemCollectionViewCell = "RegularItemCollectionViewCell"
+        static let seeMoreCollectionViewCell = "SeeMoreCollectionViewCell"
     }
 }

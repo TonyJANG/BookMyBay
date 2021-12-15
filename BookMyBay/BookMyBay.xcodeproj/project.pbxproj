@@ -25,6 +25,8 @@
 		09917ED92766A77600B7AB72 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09917ED72766A77600B7AB72 /* HomeViewController.xib */; };
 		09917EDD2766A84400B7AB72 /* AllProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09917EDB2766A84400B7AB72 /* AllProductsViewController.swift */; };
 		09917EDE2766A84400B7AB72 /* AllProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09917EDC2766A84400B7AB72 /* AllProductsViewController.xib */; };
+		09F964D72768BEDD00338F20 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F964D52768BEDD00338F20 /* CarouselViewController.swift */; };
+		09F964D82768BEDD00338F20 /* CarouselViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09F964D62768BEDD00338F20 /* CarouselViewController.xib */; };
 		09FCB9832766A89E00B07B47 /* ModalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FCB9812766A89E00B07B47 /* ModalDetailViewController.swift */; };
 		09FCB9842766A89E00B07B47 /* ModalDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FCB9822766A89E00B07B47 /* ModalDetailViewController.xib */; };
 		09FCB9892766EDF200B07B47 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FCB9882766EDF200B07B47 /* ViewModel.swift */; };
@@ -72,6 +74,8 @@
 		09917ED72766A77600B7AB72 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		09917EDB2766A84400B7AB72 /* AllProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllProductsViewController.swift; sourceTree = "<group>"; };
 		09917EDC2766A84400B7AB72 /* AllProductsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllProductsViewController.xib; sourceTree = "<group>"; };
+		09F964D52768BEDD00338F20 /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
+		09F964D62768BEDD00338F20 /* CarouselViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselViewController.xib; sourceTree = "<group>"; };
 		09FCB9812766A89E00B07B47 /* ModalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalDetailViewController.swift; sourceTree = "<group>"; };
 		09FCB9822766A89E00B07B47 /* ModalDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalDetailViewController.xib; sourceTree = "<group>"; };
 		09FCB9882766EDF200B07B47 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -182,10 +186,12 @@
 		09917ED52766A73000B7AB72 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				09917ED62766A77600B7AB72 /* HomeViewController.swift */,
-				09917ED72766A77600B7AB72 /* HomeViewController.xib */,
 				09917EDB2766A84400B7AB72 /* AllProductsViewController.swift */,
 				09917EDC2766A84400B7AB72 /* AllProductsViewController.xib */,
+				09F964D52768BEDD00338F20 /* CarouselViewController.swift */,
+				09F964D62768BEDD00338F20 /* CarouselViewController.xib */,
+				09917ED62766A77600B7AB72 /* HomeViewController.swift */,
+				09917ED72766A77600B7AB72 /* HomeViewController.xib */,
 				09FCB9812766A89E00B07B47 /* ModalDetailViewController.swift */,
 				09FCB9822766A89E00B07B47 /* ModalDetailViewController.xib */,
 			);
@@ -331,6 +337,7 @@
 			files = (
 				09917EA327669E7900B7AB72 /* LaunchScreen.storyboard in Resources */,
 				09917ED32766A4FE00B7AB72 /* SeeMoreCollectionViewCell.xib in Resources */,
+				09F964D82768BEDD00338F20 /* CarouselViewController.xib in Resources */,
 				09917EA027669E7900B7AB72 /* Assets.xcassets in Resources */,
 				09917ECF2766A4ED00B7AB72 /* RegularItemCollectionViewCell.xib in Resources */,
 				09917E9E27669E7700B7AB72 /* Main.storyboard in Resources */,
@@ -363,6 +370,7 @@
 			files = (
 				09FCB98B2766FDE100B07B47 /* BookModel.swift in Sources */,
 				09FCB98F2767046D00B07B47 /* Constants.swift in Sources */,
+				09F964D72768BEDD00338F20 /* CarouselViewController.swift in Sources */,
 				09677A4A27680C2000953C86 /* LoadImageURLImageView.swift in Sources */,
 				09917ED22766A4FE00B7AB72 /* SeeMoreCollectionViewCell.swift in Sources */,
 				09FCB9892766EDF200B07B47 /* ViewModel.swift in Sources */,

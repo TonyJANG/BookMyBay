@@ -11,7 +11,13 @@ class SeeMoreCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setUpContentView()
     }
-
+    
+    func setUpContentView() {
+        contentView.layer.borderColor = UIColor.systemTeal.cgColor
+        contentView.layer.borderWidth = 1
+        contentView.layer.cornerRadius = 10
+        contentView.layer.masksToBounds = true
+    }
 }
