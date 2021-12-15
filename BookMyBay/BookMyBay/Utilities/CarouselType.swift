@@ -7,9 +7,9 @@
 
 import Foundation
 
-enum CarouselType: CaseIterable {
+enum CarouselType {
     static var allCases: [CarouselType] { // change order or hide element from here
-        [.recommended, .favorite]
+        [.recommended, .favorite, .recent]
     }
     case favorite
     case recent

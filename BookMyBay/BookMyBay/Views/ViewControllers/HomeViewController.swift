@@ -30,12 +30,6 @@ class HomeViewController: UIViewController {
         booksData = viewModel?.getLocalBooksData()
     }
     
-    func showAllProducts() {
-        let allProductsViewController = AllProductsViewController(nibName: Constants.Identifier.allProductsViewController, bundle: nil)
-        allProductsViewController.viewModel = viewModel
-        show(allProductsViewController, sender: nil)
-    }
-    
     func setUpCarousels() {
         setUpRecommendedCarousel()
     }
@@ -57,14 +51,35 @@ class HomeViewController: UIViewController {
         stackView.addArrangedSubview(carouselViewController.view)
         carouselViewController.didMove(toParent: self)
     }
+    
+    func showAllProducts() {
+        let allProductsViewController = AllProductsViewController(nibName: Constants.Identifier.allProductsViewController, bundle: nil)
+        allProductsViewController.viewModel = viewModel
+        show(allProductsViewController, sender: nil)
+    }
+    
+    func showProductDetail(withData data: BookModel) {
+        let modalDetailViewController = ModalDetailViewController(nibName: Constants.Identifier.modalDetailViewController, bundle: nil)
+        modalDetailViewController.set(title: data.title, description: data.author, imageURL: data.imageURL)
+        modalDetailViewController.modalPresentationStyle = .overFullScreen
+        modalDetailViewController.modalTransitionStyle = .crossDissolve
+        present(modalDetailViewController, animated: true)
+    }
 }
 
 extension HomeViewController: CarouselDelegate {
     func didTapProductCell(withIndex index: Int, fromCarouselType carouselType: CarouselType) {
         print("didTapProductCell(withIndex: \(index), fromCarouselType: \(carouselType)")
+        guard let booksData = booksData,
+              index < booksData.count
+        else {
+            return
+        }
+        showProductDetail(withData: booksData[index])
     }
     
     func didTapSeeMoreCell(fromCarouselType carouselType: CarouselType) {
         print("didTapSeeMoreCell(fromCarouselType: \(carouselType)")
+        showAllProducts()
     }
 }

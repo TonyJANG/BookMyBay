@@ -27,6 +27,14 @@ class AllProductsViewController: UIViewController {
     func getProductsData() {
         booksData = viewModel?.getLocalBooksData()
     }
+    
+    func showProductDetail(withData data: BookModel) {
+        let modalDetailViewController = ModalDetailViewController(nibName: Constants.Identifier.modalDetailViewController, bundle: nil)
+        modalDetailViewController.set(title: data.title, description: data.author, imageURL: data.imageURL)
+        modalDetailViewController.modalPresentationStyle = .overFullScreen
+        modalDetailViewController.modalTransitionStyle = .crossDissolve
+        present(modalDetailViewController, animated: true)
+    }
 }
 
 extension AllProductsViewController: UICollectionViewDataSource {
@@ -51,7 +59,12 @@ extension AllProductsViewController: UICollectionViewDataSource {
 
 extension AllProductsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // code
+        guard let booksData = booksData,
+              indexPath.row < booksData.count
+        else {
+            return
+        }
+        showProductDetail(withData: booksData[indexPath.row])
     }
 }
 
