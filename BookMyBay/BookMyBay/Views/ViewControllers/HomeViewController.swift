@@ -30,33 +30,56 @@ class HomeViewController: UIViewController {
         booksData = viewModel?.getLocalBooksData()
     }
     
-    func showAllProducts() {
-        let allProductsViewController = AllProductsViewController(nibName: Constants.Identifier.allProductsViewController, bundle: nil)
-        allProductsViewController.viewModel = viewModel
-        show(allProductsViewController, sender: nil)
-    }
-    
     func setUpCarousels() {
         setUpRecommendedCarousel()
     }
     
     func setUpRecommendedCarousel() {
         guard let booksData = booksData else { return }
-        let recommendedBooksData = Array(booksData.prefix(20))
-        setUpCarousel(withTitle: "Recommended", booksData: recommendedBooksData, shouldShowSeeMoreCellWithTitle: "See all\nrecommended")
-        setUpCarousel(withTitle: "Favorites", booksData: recommendedBooksData, shouldShowSeeMoreCellWithTitle: nil)
-        setUpCarousel(withTitle: "Recents", booksData: recommendedBooksData, shouldShowSeeMoreCellWithTitle: nil)
+        let recommendedBooksData = Array(booksData.prefix(10))
+        for carouselType in CarouselType.allCases {
+            setUpCarousel(ofType: carouselType, data: recommendedBooksData)
+        }
     }
     
-    func setUpCarousel(withTitle title: String, booksData: [BookModel], shouldShowSeeMoreCellWithTitle seeMoreCellTitle: String?) {
+    func setUpCarousel(ofType type: CarouselType, data: [BookModel]) {
         let carouselViewController = CarouselViewController(nibName: Constants.Identifier.carouselViewController, bundle: nil)
-        carouselViewController.setTitle(title)
-        carouselViewController.booksData = booksData
-        if let seeMoreCellTitle = seeMoreCellTitle {
-            carouselViewController.shouldShowSeeMoreCell(withTitle: seeMoreCellTitle)
-        }
+        carouselViewController.type = type
+        carouselViewController.booksData = data
+        carouselViewController.delegate = self
         addChild(carouselViewController)
         stackView.addArrangedSubview(carouselViewController.view)
         carouselViewController.didMove(toParent: self)
+    }
+    
+    func showAllProducts() {
+        let allProductsViewController = AllProductsViewController(nibName: Constants.Identifier.allProductsViewController, bundle: nil)
+        allProductsViewController.viewModel = viewModel
+        show(allProductsViewController, sender: nil)
+    }
+    
+    func showProductDetail(withData data: BookModel) {
+        let modalDetailViewController = ModalDetailViewController(nibName: Constants.Identifier.modalDetailViewController, bundle: nil)
+        modalDetailViewController.set(title: data.title, description: data.author, imageURL: data.imageURL)
+        modalDetailViewController.modalPresentationStyle = .overFullScreen
+        modalDetailViewController.modalTransitionStyle = .crossDissolve
+        present(modalDetailViewController, animated: true)
+    }
+}
+
+extension HomeViewController: CarouselDelegate {
+    func didTapProductCell(withIndex index: Int, fromCarouselType carouselType: CarouselType) {
+        print("didTapProductCell(withIndex: \(index), fromCarouselType: \(carouselType)")
+        guard let booksData = booksData,
+              index < booksData.count
+        else {
+            return
+        }
+        showProductDetail(withData: booksData[index])
+    }
+    
+    func didTapSeeMoreCell(fromCarouselType carouselType: CarouselType) {
+        print("didTapSeeMoreCell(fromCarouselType: \(carouselType)")
+        showAllProducts()
     }
 }

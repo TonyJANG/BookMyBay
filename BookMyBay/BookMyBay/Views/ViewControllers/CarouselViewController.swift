@@ -11,7 +11,18 @@ class CarouselViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    weak var delegate: CarouselDelegate?
     var booksData: [BookModel]?
+    var type: CarouselType? {
+        didSet {
+            guard let type = type else {
+                return
+            }
+            titleLabelText = type.title
+            shoulShowSeeMoreCell = type.shouldShowSeeMoreCell
+            seeMoreCellTitle = type.seeMoreCellTitle ?? "See\nmore"
+        }
+    }
     
     private var titleLabelText: String = "Carousel of books" {
         didSet {
@@ -78,7 +89,15 @@ extension CarouselViewController: UICollectionViewDataSource {
 
 extension CarouselViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // code
+        guard let type = type else {
+            return
+        }
+        // if indexPath.row == booksData.count + 1 {
+        if collectionView.cellForItem(at: indexPath) is SeeMoreCollectionViewCell {
+            delegate?.didTapSeeMoreCell(fromCarouselType: type)
+        } else {
+            delegate?.didTapProductCell(withIndex: indexPath.row, fromCarouselType: type)
+        }
     }
 }
 
