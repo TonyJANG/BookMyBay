@@ -42,21 +42,29 @@ class HomeViewController: UIViewController {
     
     func setUpRecommendedCarousel() {
         guard let booksData = booksData else { return }
-        let recommendedBooksData = Array(booksData.prefix(20))
-        setUpCarousel(withTitle: "Recommended", booksData: recommendedBooksData, shouldShowSeeMoreCellWithTitle: "See all\nrecommended")
-        setUpCarousel(withTitle: "Favorites", booksData: recommendedBooksData, shouldShowSeeMoreCellWithTitle: nil)
-        setUpCarousel(withTitle: "Recents", booksData: recommendedBooksData, shouldShowSeeMoreCellWithTitle: nil)
+        let recommendedBooksData = Array(booksData.prefix(10))
+        for carouselType in CarouselType.allCases {
+            setUpCarousel(ofType: carouselType, data: recommendedBooksData)
+        }
     }
     
-    func setUpCarousel(withTitle title: String, booksData: [BookModel], shouldShowSeeMoreCellWithTitle seeMoreCellTitle: String?) {
+    func setUpCarousel(ofType type: CarouselType, data: [BookModel]) {
         let carouselViewController = CarouselViewController(nibName: Constants.Identifier.carouselViewController, bundle: nil)
-        carouselViewController.setTitle(title)
-        carouselViewController.booksData = booksData
-        if let seeMoreCellTitle = seeMoreCellTitle {
-            carouselViewController.shouldShowSeeMoreCell(withTitle: seeMoreCellTitle)
-        }
+        carouselViewController.type = type
+        carouselViewController.booksData = data
+        carouselViewController.delegate = self
         addChild(carouselViewController)
         stackView.addArrangedSubview(carouselViewController.view)
         carouselViewController.didMove(toParent: self)
+    }
+}
+
+extension HomeViewController: CarouselDelegate {
+    func didTapProductCell(withIndex index: Int, fromCarouselType carouselType: CarouselType) {
+        print("didTapProductCell(withIndex: \(index), fromCarouselType: \(carouselType)")
+    }
+    
+    func didTapSeeMoreCell(fromCarouselType carouselType: CarouselType) {
+        print("didTapSeeMoreCell(fromCarouselType: \(carouselType)")
     }
 }
